@@ -1,0 +1,21 @@
+name: 01 - Manual Sanity Check
+
+# 1. THE TRIGGER: Manual button click only
+on: workflow_dispatch
+
+# 2. THE JOB: Define the computer
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    
+    # 3. THE STEPS: The list of commands
+    steps:
+      # A simple shell command
+      - name: Print a greeting
+        run: echo "Hello! I am running on a Cloud Server."
+      
+      # A multi-line script
+      - name: Check system info
+        run: |
+          echo "The OS is:"
+          cat /etc/os-release
