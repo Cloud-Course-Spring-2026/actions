@@ -1,0 +1,23 @@
+name: 03 - Report Generator
+
+on: workflow_dispatch
+
+jobs:
+  build-report:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      # This step creates a file
+      - name: Generate Data File
+        run: |
+          mkdir output
+          echo "System Report $(date)" > output/report.txt
+          
+      # This step saves the file to GitHub
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-report
+          path: output/
