@@ -1,0 +1,1 @@
+[![03 - Report Generator](https://github.com/Cloud-Course-Spring-2026/actions/actions/workflows/release.yaml/badge.svg)](https://github.com/Cloud-Course-Spring-2026/actions/actions/workflows/release.yaml)
